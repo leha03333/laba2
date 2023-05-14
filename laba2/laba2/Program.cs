@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("1. Ввести А");
         Console.WriteLine("2. Ввести В");
         Console.WriteLine("3. Выполнить операцию '+'");
-
+        Console.WriteLine("4. Выполнить операцию '-'");
         int choice;
         double a = 0, b = 0;
         bool hasA = false, hasB = false;
@@ -46,6 +46,14 @@ class Program
                             continue;
                         }
                         Console.WriteLine($"Результат сложения: {a + b}");
+                        break;
+                    case 4:
+                        if (!hasA || !hasB)
+                        {
+                            Console.WriteLine("Ошибка! Введите значения А и В перед выполнением операции.");
+                            continue;
+                        }
+                        Console.WriteLine($"Результат вычитания: {a - b}");
                         break;
                 }
             }
