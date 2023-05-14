@@ -47,6 +47,14 @@ class Program
                         }
                         Console.WriteLine($"Результат сложения: {a + b}");
                         break;
+                    case 5:
+                        if (!hasA || !hasB)
+                        {
+                            Console.WriteLine("Ошибка! Введите значения А и В перед выполнением операции.");
+                            continue;
+                        }
+                        Console.WriteLine($"Результат умножения: {a * b}");
+                        break;
                 }
             }
             catch (FormatException)
